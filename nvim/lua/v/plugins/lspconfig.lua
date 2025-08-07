@@ -9,23 +9,6 @@ return {
     config = function()
         local lspconfig = require("lspconfig")
 
-        vim.fn.sign_define(
-            "DiagnosticSignError",
-            { text = "", texthl = "DiagnosticSignError", numhl = "DiagnosticSignError" }
-        )
-        vim.fn.sign_define(
-            "DiagnosticSignHint",
-            { text = "", texthl = "DiagnosticSignHint", numhl = "DiagnosticSignHint" }
-        )
-        vim.fn.sign_define(
-            "DiagnosticSignInfo",
-            { text = "", texthl = "DiagnosticSignInfo", numhl = "DiagnosticSignInfo" }
-        )
-        vim.fn.sign_define(
-            "DiagnosticSignWarn",
-            { text = "", texthl = "DiagnosticSignWarn", numhl = "DiagnosticSignWarn" }
-        )
-
         vim.diagnostic.config({
             virtual_text = {
                 source = false,
@@ -34,13 +17,13 @@ return {
                     local sign = ""
 
                     if diagnostic.severity == vim.diagnostic.severity.ERROR then
-                        sign = vim.fn.sign_getdefined("DiagnosticSignError")[1].text
+                        sign = vim.diagnostic.config()["signs"]["text"][vim.diagnostic.severity.ERROR]
                     elseif diagnostic.severity == vim.diagnostic.severity.WARN then
-                        sign = vim.fn.sign_getdefined("DiagnosticSignWarn")[1].text
+                        sign = vim.diagnostic.config()["signs"]["text"][vim.diagnostic.severity.WARN]
                     elseif diagnostic.severity == vim.diagnostic.severity.INFO then
-                        sign = vim.fn.sign_getdefined("DiagnosticSignInfo")[1].text
+                        sign = vim.diagnostic.config()["signs"]["text"][vim.diagnostic.severity.INFO]
                     elseif diagnostic.severity == vim.diagnostic.severity.HINT then
-                        sign = vim.fn.sign_getdefined("DiagnosticSignHint")[1].text
+                        sign = vim.diagnostic.config()["signs"]["text"][vim.diagnostic.severity.HINT]
                     end
 
                     return string.format("%s%s: %s ", sign, diagnostic.source or "", diagnostic.message)
@@ -54,10 +37,29 @@ return {
                     return string.format("%s: %s ", diagnostic.source or "", diagnostic.message)
                 end,
             },
-            signs = true,
             underline = true,
             update_in_insert = false,
             severity_sort = true,
+            signs = {
+                text = {
+                    [vim.diagnostic.severity.ERROR] = " ",
+                    [vim.diagnostic.severity.WARN] = " ",
+                    [vim.diagnostic.severity.INFO] = " ",
+                    [vim.diagnostic.severity.HINT] = " ",
+                },
+                texthl = {
+                    [vim.diagnostic.severity.ERROR] = "DiagnosticSignError",
+                    [vim.diagnostic.severity.WARN] = "DiagnosticSignWarn",
+                    [vim.diagnostic.severity.HINT] = "DiagnosticSignHint",
+                    [vim.diagnostic.severity.INFO] = "DiagnosticSignInfo",
+                },
+                numhl = {
+                    [vim.diagnostic.severity.ERROR] = "DiagnosticSignError",
+                    [vim.diagnostic.severity.WARN] = "DiagnosticSignWarn",
+                    [vim.diagnostic.severity.HINT] = "DiagnosticSignHint",
+                    [vim.diagnostic.severity.INFO] = "DiagnosticSignInfo",
+                },
+            },
         })
 
         vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {

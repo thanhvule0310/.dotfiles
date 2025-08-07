@@ -7,6 +7,8 @@ case "$1" in
   rm -rf !(.git|.github|helpers|Makefile|.gitignore|dotfiles.sh|.|..)
 
   cp -r ~/.config/alacritty .
+  cp -r ~/.config/wezterm .
+  cp -r ~/.config/foot .
   cp -r ~/.config/nvim .
   cp -r ~/.config/bat .
   cp -r ~/.config/htop .
@@ -33,6 +35,8 @@ END
 
   echo -e "\\033[0;34m\\033[1m ▽\\033[0m\\033[1m Restore config files"
   cp -r ./alacritty ~/.config
+  cp -r ./wezterm ~/.config
+  cp -r ./foot ~/.config
   cp -r ./bat ~/.config
   cp -r ./nvim ~/.config
   cp -r ./htop ~/.config

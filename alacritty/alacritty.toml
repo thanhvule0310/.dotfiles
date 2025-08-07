@@ -31,68 +31,69 @@ style = "Italic"
 [font.normal]
 family = "AdwaitaMono Nerd Font"
 style = "Regular"
+
 [colors.primary]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
-dim_foreground = "#7f849c"
-bright_foreground = "#cdd6f4"
+background = "#1e2326"
+foreground = "#d3c6aa"
+dim_foreground = "#9E9580"
+bright_foreground = "#B3A891"
 
 [colors.cursor]
-text = "#1e1e2e"
-cursor = "#f5e0dc"
+text = "#1e2326"
+cursor = "#d3c6aa"
 
 [colors.vi_mode_cursor]
-text = "#1e1e2e"
-cursor = "#b4befe"
+text = "#1e2326"
+cursor = "#d699b6"
 
 [colors.search.matches]
-foreground = "#1e1e2e"
-background = "#a6adc8"
+foreground = "#1e2326"
+background = "#e69875"
 
 [colors.search.focused_match]
-foreground = "#1e1e2e"
-background = "#a6e3a1"
+foreground = "#1e2326"
+background = "#a7c080"
 
 [colors.footer_bar]
-foreground = "#1e1e2e"
-background = "#a6adc8"
+foreground = "#121517"
+background = "#B3A891"
 
 [colors.hints.start]
-foreground = "#1e1e2e"
-background = "#f9e2af"
+foreground = "#262c30"
+background = "#4a545a"
 
 [colors.hints.end]
-foreground = "#1e1e2e"
-background = "#a6adc8"
+foreground = "#1B2022"
+background = "#5d6970"
 
 [colors.selection]
-text = "#1e1e2e"
-background = "#f5e0dc"
+text = "#262c30"
+background = "#9E9580"
 
 [colors.normal]
-black = "#45475a"
-red = "#f38ba8"
-green = "#a6e3a1"
-yellow = "#f9e2af"
-blue = "#89b4fa"
-magenta = "#f5c2e7"
-cyan = "#94e2d5"
-white = "#bac2de"
+black = "#262c30"
+red = "#e67e80"
+green = "#a7c080"
+yellow = "#dbbc7f"
+blue = "#7fbbb3"
+magenta = "#d699b6"
+cyan = "#7fbbb3"
+white = "#5d6970"
 
 [colors.bright]
-black = "#585b70"
-red = "#f38ba8"
-green = "#a6e3a1"
-yellow = "#f9e2af"
-blue = "#89b4fa"
-magenta = "#f5c2e7"
-cyan = "#94e2d5"
-white = "#a6adc8"
+black = "#384044"
+red = "#e67e80"
+green = "#a7c080"
+yellow = "#dbbc7f"
+blue = "#7fbbb3"
+magenta = "#d699b6"
+cyan = "#7fbbb3"
+white = "#4a545a"
 
 [[colors.indexed_colors]]
 index = 16
-color = "#fab387"
+color = "#e69875"
 
 [[colors.indexed_colors]]
 index = 17
-color = "#f5e0dc"
+color = "#B3A891"
