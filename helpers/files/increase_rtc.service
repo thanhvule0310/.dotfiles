@@ -1,0 +1,8 @@
+[Unit]
+Description=Increasing the highest requested RTC interrupt frequency  
+
+[Service]
+ExecStart=/usr/bin/increase_rtc
+ 
+[Install]
+WantedBy=multi-user.target
