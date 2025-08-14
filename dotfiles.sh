@@ -9,6 +9,7 @@ case "$1" in
   cp -r ~/.config/alacritty .
   cp -r ~/.config/wezterm .
   cp -r ~/.config/foot .
+  cp -r ~/.config/kitty .
   cp -r ~/.config/nvim .
   cp -r ~/.config/bat .
   cp -r ~/.config/htop .
@@ -37,6 +38,7 @@ END
   cp -r ./alacritty ~/.config
   cp -r ./wezterm ~/.config
   cp -r ./foot ~/.config
+  cp -r ./kitty ~/.config
   cp -r ./bat ~/.config
   cp -r ./nvim ~/.config
   cp -r ./htop ~/.config
