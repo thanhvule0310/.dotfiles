@@ -27,10 +27,10 @@
 
 * {
     font-family:
-        'Font Awesome 6 Pro Solid',
         JetBrainsMono Nerd Font,
         sans-serif;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 window#waybar {
@@ -355,4 +355,8 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
+}
+
+#custom-power {
+    color: @red;
 }

@@ -64,13 +64,6 @@ END
 
   echo -e "\\033[0;32m\\033[1m ✓\\033[0m\\033[1m Done"
 
-  echo -e "\\033[0;34m\\033[1m ▽\\033[0m\\033[1m Enhance Perfomance"
-  sudo pacman -Syyu
-  sudo pacman -S tuned
-  sudo systemctl enable --now tuned.service
-  sudo tuned-adm profile latency-performance
-  echo -e "\\033[0;32m\\033[1m ✓\\033[0m\\033[1m Done"
-
   echo -e "\\033[0;34m\\033[1m ▽\\033[0m\\033[1m Enhance Audio"
   sudo cp ./helpers/files/increase_rtc /usr/bin/
   sudo cp ./helpers/files/increase_rtc.service /etc/systemd/system/
@@ -85,8 +78,6 @@ fs.inotify.max_user_watches = 600000
 END
 
   sudo setpci -v -d *:* latency_timer=b0
-
-  sudo grub-mkconfig -o /boot/grub/grub.cfg
   echo -e "\\033[0;32m\\033[1m ✓\\033[0m\\033[1m Done"
   ;;
 

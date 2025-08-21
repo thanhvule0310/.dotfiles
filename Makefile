@@ -10,6 +10,7 @@ npm:
 	npm i -g npm neovim
 
 ssh:
+	sudo systemctl enable --now sshd
 	ssh-keygen -t ed25519 -C "thanhvule0310@gmail.com"
 	eval "$(ssh-agent -s)"
 	ssh-add ~/.ssh/id_ed25519
@@ -23,3 +24,6 @@ zsh/plugins:
 
 arch:
 	./helpers/arch.sh
+
+hyprpm:
+	./helpers/hyprpm.sh
