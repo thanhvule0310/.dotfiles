@@ -10,6 +10,7 @@ case "$1" in
   cp -r ~/.config/wezterm .
   cp -r ~/.config/foot .
   cp -r ~/.config/kitty .
+  cp -r ~/.config/ghostty .
   cp -r ~/.config/nvim .
   cp -r ~/.config/bat .
   cp -r ~/.config/htop .
@@ -19,17 +20,17 @@ case "$1" in
   cp ~/.prettierrc.yaml .
   cp ~/.tmux.conf .
 
+  # Hyprland
+  cp -r ~/.config/hypr .
+  cp -r ~/.config/waybar .
+  cp -r ~/.config/swaync .
+  cp -r ~/.config/wofi .
+
   echo -e "\\033[0;32m\\033[1m ✓\\033[0m\\033[1m Done"
   ;;
 --restore)
   echo -e "\\033[0;34m\\033[1m ▽\\033[0m\\033[1m Set environment variables"
   sudo tee -a /etc/environment <<END
-GTK_IM_MODULE="ibus"
-QT_IM_MODULE="ibus"
-XMODIFIERS="@im=ibus"
-QT4_IM_MODULE="ibus"
-CLUTTER_IM_MODULE="ibus"
-GLFW_IM_MODULE="ibus"
 FREETYPE_PROPERTIES="cff:no-stem-darkening=0"
 END
   echo -e "\\033[0;32m\\033[1m ✓\\033[0m\\033[1m Done"
@@ -39,6 +40,7 @@ END
   cp -r ./wezterm ~/.config
   cp -r ./foot ~/.config
   cp -r ./kitty ~/.config
+  cp -r ./ghostty ~/.config
   cp -r ./bat ~/.config
   cp -r ./nvim ~/.config
   cp -r ./htop ~/.config
@@ -47,16 +49,13 @@ END
   cp ./.tmux.conf ~/
   cp ./.prettierrc.yaml ~/
   cp ./starship.toml ~/.config
-  echo -e "\\033[0;32m\\033[1m ✓\\033[0m\\033[1m Done"
 
-  echo -e "\\033[0;34m\\033[1m ▽\\033[0m\\033[1m Remap Gnome Keybindings"
-  gsettings set org.gnome.shell.app-switcher current-workspace-only true
-  for i in {1..9}; do
-    echo "$i"
-    gsettings set org.gnome.shell.keybindings "switch-to-application-$i" "['']"
-    gsettings set org.gnome.desktop.wm.keybindings "switch-to-workspace-$i" "['<Super>$i']"
-    gsettings set org.gnome.desktop.wm.keybindings "move-to-workspace-$i" "['<Super><Shift>$i']"
-  done
+  # Hyprland
+  cp -r ./hypr ~/.config/hypr
+  cp -r ./waybar ~/.config/waybar
+  cp -r ./swaync ~/.config/swaync
+  cp -r ./wofi ~/.config/wofi
+
   echo -e "\\033[0;32m\\033[1m ✓\\033[0m\\033[1m Done"
 
   echo -e "\\033[0;34m\\033[1m ▽\\033[0m\\033[1m Enhance Perfomance"

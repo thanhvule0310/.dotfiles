@@ -19,6 +19,7 @@ vimcmd_replace_one_symbol = "[ ❮](bold purple)"
 [directory]
 format = ' [ $path]($style)[$read_only]($read_only_style) '
 style = "bold blue"
+truncate_to_repo = false
 
 [package]
 symbol = "󰏓 "
