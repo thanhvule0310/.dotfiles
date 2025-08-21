@@ -32,7 +32,6 @@ case "$1" in
   echo -e "\\033[0;34m\\033[1m ▽\\033[0m\\033[1m Set environment variables"
   sudo tee -a /etc/environment <<END
 FREETYPE_PROPERTIES="cff:no-stem-darkening=0"
-GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 END
