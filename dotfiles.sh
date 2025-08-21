@@ -6,10 +6,10 @@ case "$1" in
   echo -e "\\033[0;34m\\033[1m ▽\\033[0m\\033[1m Backup"
   rm -rf !(.git|.github|helpers|Makefile|.gitignore|dotfiles.sh|.|..)
 
+  cp -r ~/.gtkrc-2.0 .
+  cp -r ~/.config/gtk-3.0 .
+  cp -r ~/.config/gtk-4.0 .
   cp -r ~/.config/alacritty .
-  cp -r ~/.config/wezterm .
-  cp -r ~/.config/foot .
-  cp -r ~/.config/kitty .
   cp -r ~/.config/ghostty .
   cp -r ~/.config/nvim .
   cp -r ~/.config/bat .
@@ -39,10 +39,12 @@ END
   echo -e "\\033[0;32m\\033[1m ✓\\033[0m\\033[1m Done"
 
   echo -e "\\033[0;34m\\033[1m ▽\\033[0m\\033[1m Restore config files"
+
+  cp -r ./.gtkrc-2.0 ~/
+  cp -r ./gtk-3.0 ~/.config
+  cp -r ./gtk-4.0 ~/.config
+  cp -r ~/.config/gtk-4.0 .
   cp -r ./alacritty ~/.config
-  cp -r ./wezterm ~/.config
-  cp -r ./foot ~/.config
-  cp -r ./kitty ~/.config
   cp -r ./ghostty ~/.config
   cp -r ./bat ~/.config
   cp -r ./nvim ~/.config
@@ -58,6 +60,8 @@ END
   cp -r ./waybar ~/.config/waybar
   cp -r ./swaync ~/.config/swaync
   cp -r ./wofi ~/.config/wofi
+
+  sudo mv ./helpers/fonts/* /usr/share/fonts/
 
   echo -e "\\033[0;32m\\033[1m ✓\\033[0m\\033[1m Done"
 

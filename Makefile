@@ -20,3 +20,6 @@ zsh/omz:
 
 zsh/plugins:
 	./helpers/zsh_plugins.sh
+
+arch:
+	./helpers/arch.sh

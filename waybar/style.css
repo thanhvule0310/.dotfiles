@@ -128,7 +128,7 @@ button:hover {
 #mpd {
     padding: 0 15px;
     color: @base;
-    border-radius: 10px;
+    border-radius: 50px;
     font-weight: bold;
 }
 
@@ -266,7 +266,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: @blue;
 }
 
 #tray > .passive {
@@ -275,15 +275,15 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: @red;
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: @surface0;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
+    background-color: @text;
     color: #2d3436;
 }
 

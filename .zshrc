@@ -23,9 +23,6 @@ function ratemirrors {
   echo "Rate Mirrors: Arch"
   rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
 
-  echo "Rate Mirrors: EndeavourOS"
-  rate-mirrors endeavouros | sudo tee /etc/pacman.d/endeavouros-mirrorlist
-
   echo "Rate Mirrors: Chaotic AUR"
   rate-mirrors chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist
 }

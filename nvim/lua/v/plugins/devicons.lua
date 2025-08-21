@@ -709,6 +709,16 @@ return {
                     color = colors.sky,
                     name = "TailwindConfig",
                 },
+                ["hyprland.conf"] = {
+                    icon = "",
+                    color = colors.sky,
+                    name = "Hypr",
+                },
+                ["hyprpaper.conf"] = {
+                    icon = "",
+                    color = colors.sky,
+                    name = "Hypr",
+                },
             },
         })
     end,
