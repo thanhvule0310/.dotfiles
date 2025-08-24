@@ -34,7 +34,7 @@ vim.opt.pumheight = 10
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 5
 vim.opt.shiftround = true
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 4
 vim.opt.shortmess:append({ W = true, I = true, c = true, s = true, F = true, C = true })
 vim.opt.showmode = false
 vim.opt.showtabline = 0

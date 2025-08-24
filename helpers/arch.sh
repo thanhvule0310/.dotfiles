@@ -8,7 +8,7 @@ sudo pacman -Syyu
 echo -e "\\033[0;32m\\033[1m ✓\\033[0m\\033[1m Done"
 
 echo -e "\\033[0;34m\\033[1m ▽\\033[0m\\033[1m Install necessary packages"
-sudo pacman -S git curl wget tmux zsh ripgrep vim htop fastfetch fd bat xdg-user-dirs base-devel cmake unzip ninja 7zip bluetui rustup jq devtools gcc cpio meson fnm hyprland hyprpaper swaync waybar wofi sxiv dolphin firefox mesa xf86-video-intel vulkan-intel wl-clipboard tuned
+sudo pacman -S git curl wget tmux zsh ripgrep vim htop fastfetch fd bat xdg-user-dirs base-devel cmake unzip ninja 7zip bluetui rustup jq devtools gcc cpio meson fnm hyprland hyprpaper swaync waybar wofi sxiv dolphin firefox mesa xf86-video-intel vulkan-intel wl-clipboard tuned fcitx5 fcitx5-qt fcitx5-gtk fcitx5-unikey kcm-fcitx5 wev noto-fonts noto-fonts-cjk noto-fonts-extra ttf-apple-emoji apple-fonts podman podman-compose podman-desktop podman-docker
 echo -e "\\033[0;32m\\033[1m ✓\\033[0m\\033[1m Done"
 
 echo -e "\\033[0;34m\\033[1m ▽\\033[0m\\033[1m Install bob-nvim"
@@ -20,3 +20,5 @@ xdg-user-dirs-update
 
 sudo systemctl enable --now tuned.service
 sudo tuned-adm profile latency-performance
+
+sudo systemctl enable --now podman.service

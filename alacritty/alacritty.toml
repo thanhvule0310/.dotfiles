@@ -19,19 +19,19 @@ glyph_offset = { x = 0, y = 3 }
 offset = { x = 0, y = 6 }
 
 [font.bold]
-family = "AdwaitaMono Nerd Font"
+family = "MapleMono NF"
 style = "Bold"
 
 [font.bold_italic]
-family = "AdwaitaMono Nerd Font"
+family = "MapleMono NF"
 style = "Bold Italic"
 
 [font.italic]
-family = "AdwaitaMono Nerd Font"
+family = "MapleMono NF"
 style = "Italic"
 
 [font.normal]
-family = "AdwaitaMono Nerd Font"
+family = "MapleMono NF"
 style = "Regular"
 
 [colors.primary]

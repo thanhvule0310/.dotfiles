@@ -166,11 +166,11 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {format_source} {volume}%",
-        "format-bluetooth-muted": " {format_source}  {icon}",
+        "format-bluetooth": "{icon}  {format_source} {volume}%",
+        "format-bluetooth-muted": " {format_source}  {icon}",
         "format-muted": " {format_source}",
-        "fomat-source": " {volume}%",
-        "format-source-muted": "",
+        "fomat-source": "",
+        "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -180,7 +180,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pwvucontrol"
     },
     "custom/media": {
         "format": "{icon} {text}",
