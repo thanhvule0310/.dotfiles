@@ -2,13 +2,13 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 32, // Waybar height (to be removed for auto height)
+    "height": 40, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 10, // Gaps between modules (4px)
+    "spacing": 0, // Gaps between modules (4px)
     "reload_style_on_change": true,
-    "margin-top": 10,
-    "margin-left": 10,
-    "margin-right": 10,
+    // "margin-top": 10,
+    // "margin-left": 10,
+    // "margin-right": 10,
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": [],

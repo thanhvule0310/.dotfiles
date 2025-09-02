@@ -52,7 +52,7 @@
 @define-color crust-rgb  rgb(24, 25, 38);
 
 * {
-    font-family: 'JetBrainsMono Nerd Font', monospace;
+    font-family: 'LigaSFMono Nerd Font', monospace;
     font-size: 14px;
 }
 
@@ -60,9 +60,9 @@
 window {
     margin: 0px;
     padding: 10px;
-    border: 0.16em solid @lavender;
+    border: 1px solid @mantle;
     border-radius: 0.1em;
-    background-color: @base;
+    background-color: rgba(36, 39, 58, 0.7);
     /* animation: slideIn 0.5s ease-in-out both; */
     border-radius: 10px;
 }
@@ -83,7 +83,7 @@ window {
     margin: 5px;
     padding: 10px;
     border: none;
-    background-color: @base;
+    background-color: rgba(36, 39, 58, 0);
     animation: fadeIn 0.5s ease-in-out both;
 }
 
@@ -103,7 +103,7 @@ window {
     margin: 5px;
     padding: 10px;
     border: none;
-    background-color: @base;
+    background-color: rgba(36, 39, 58, 0);
 }
 
 /* Scroll */
@@ -111,7 +111,7 @@ window {
     margin: 0px;
     padding: 10px;
     border: none;
-    background-color: @base;
+    background-color: rgba(36, 39, 58, 0);
 }
 
 /* Input */
@@ -121,13 +121,13 @@ window {
     border: none;
     border-radius: 0.1em;
     color: @text;
-    background-color: @base;
+    background-color: rgba(36, 39, 58, 0);
     animation: fadeIn 0.5s ease-in-out both;
 }
 
 #input image {
     border: none;
-    color: @red;
+    color: @text;
 }
 
 #input * {
@@ -143,7 +143,7 @@ window {
 }
 
 #entry {
-    background-color: @base;
+    background-color: rgba(36, 39, 58, 0);
 }
 
 #entry arrow {
@@ -153,11 +153,12 @@ window {
 
 /* Selected Entry */
 #entry:selected {
-    border: 0.11em solid @lavender;
+    font-weight: bold;
+    border: none;
 }
 
 #entry:selected #text {
-    color: @mauve;
+    color: @text;
 }
 
 #entry:drop(active) {
